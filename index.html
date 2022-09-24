@@ -16,6 +16,10 @@
     });
     window.onGSInit = async (gs) => {
 
+      const showPreloaderAd = "true";
+      if (showPreloaderAd) {
+        gs.ads.showPreloader();
+      }
 
       await _unityAwaiter.ready;
       window.GameScore = new GameScoreUnity(gs, unityI);
@@ -45,11 +49,11 @@
 
   <script>
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/Build.loader.js";
+    const loaderUrl = buildUrl + "/DinoRush.loader.js";
     const config = {
-      dataUrl: buildUrl + "/Build.data",
-      frameworkUrl: buildUrl + "/Build.framework.js",
-      codeUrl: buildUrl + "/Build.wasm",
+      dataUrl: buildUrl + "/DinoRush.data",
+      frameworkUrl: buildUrl + "/DinoRush.framework.js",
+      codeUrl: buildUrl + "/DinoRush.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DaruProduction",
       productName: "Dino Rush",
